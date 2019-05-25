@@ -1,10 +1,9 @@
 node(){
 stage ("clone"){
-  checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Srinivas2783/java-tomcat-maven-example-master.git']]])
+  
 }
 stage ("build"){
-  withMaven(maven:'Maven_3_3_9', mavenLocalRepo: '.repository',mavenSettingsConfig:'my-config') {
-    sh 'mvn clean install'
+  
   }
 }
 stage ("test-unittesting"){
